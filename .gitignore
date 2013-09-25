@@ -1,0 +1,21 @@
+nbproject/*
+.sass-cache/
+.c9revisions/*
+.DS_Store
+dist/*
+_notes/
+sftp.json
+
+# OS generated files #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ethumbs.db
+Thumbs.db
+/.project
+*.orig
+*.tmp
+*.log
+node_modules/
