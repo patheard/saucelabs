@@ -5,7 +5,14 @@
 	<meta charset="utf-8" >
 	<link rel="stylesheet" href="mocha/mocha.css" >
 	<script src="mocha/mocha.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+	<!--[if lte IE 8]>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<![endif]-->
+	<!--[if gt IE 8]><!-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	<!--<![endif]-->
+
 	<script>mocha.setup({ui: 'bdd'});</script>
 	<script>
 		function assert(expr, msg) {
