@@ -3,8 +3,7 @@
 <head>
 	<title>Mocha - Window Ready</title>
 	<meta charset="utf-8" >
-	<link rel="stylesheet" href="mocha/mocha.css" >
-	<script src="mocha/mocha.js"></script>
+	<link rel="stylesheet" href="../node_modules/mocha/mocha.css" >
 
 	<!--[if lte IE 8]>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -13,33 +12,26 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 	<!--<![endif]-->
 
-	<script>mocha.setup({ui: 'bdd'});</script>
-	<script>
-		function assert(expr, msg) {
-			if (!expr) throw new Error(msg || 'failed');
-		}
-	</script>
-	<script>
-		var ready = false;
-		$(window).on('ready', function() {
-			ready = true;
-		});
-	</script>
-	<script>
-		describe('window ready event bubbles', function () {
-		it('should be ready', function () {
-				assert(ready);
-			});
-		});
-	</script>
-	<script>
-		onload = function(){
-			var runner = mocha.run();
-		};
-	</script>
 </head>
 
 <body>
 	<div id="mocha"></div>
+
+	<script src="../node_modules/mocha/mocha.js"></script>
+	<script src="../node_modules/expect.js/expect.js"></script>
+	<script>
+		var ready = false;
+		mocha.setup('bdd');
+
+		describe('window ready event bubbles', function () {
+			it('should be ready', function () {
+				expect(ready).to.equal(true);
+			});
+		});
+
+		$(window)
+			.on('ready', function() { ready = true; })
+			.on('load', mocha.run);
+	</script>
 </body>
 </html>
