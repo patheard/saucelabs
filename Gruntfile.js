@@ -1,68 +1,20 @@
 module.exports = function(grunt) {
 	var browsers = [{
-		browserName: 'firefox',
-		platform: 'Windows XP',
-		version: '23'
-	}, {
-		browserName: 'firefox',
-		platform: 'Windows 7',
-		version: '23'
-	}, {
-		browserName: 'googlechrome',
-		platform: 'Windows XP',
-		version: ''
-	}, {
-		browserName: 'googlechrome',
-		platform: 'Windows 7',
-		version: ''
-	}, {
-		browserName: 'googlechrome',
-		platform: 'Linux',
-		version: ''
-	}, {
-		browserName: 'internet explorer',
-		platform: 'Windows 8',
-		version: '10'
-	}, {
-		browserName: 'internet explorer',
-		platform: 'Windows 7',
-		version: '9'
-	}, {
-		browserName: 'internet explorer',
-		platform: 'Windows XP',
-		version: '8'
-	}, {
-		browserName: 'opera',
-		platform: 'Windows 7',
-		version: '12'
-	}, {
-		browserName: 'safari',
-		platform: 'OS X 10.6',
-		version: '5'
-	}, {
-		browserName: 'iphone',
-		platform: 'OS X 10.8',
-		version: '6'
-	}, {
-		browserName: 'iphone',
-		platform: 'OS X 10.6',
-		version: '5.0'
-	}, {
-		browserName: 'iphone',
-		platform: 'OS X 10.6',
-		version: '4'
-	}, {
-		browserName: 'ipad',
-		platform: 'OS X 10.8',
-		version: '6'
-	}, {
-		browserName: 'ipad',
-		platform: 'OS X 10.6',
-		version: '5.0'
-	}, {
-		browserName: 'ipad',
-		platform: 'OS X 10.6',
-		version: '4'
+        browserName: "firefox",
+        version: "22",
+        platform: "XP"
+    },{
+        browserName: "firefox",
+        version: "21",
+        platform: "XP"
+    },{
+        browserName: "chrome",
+        version: "29",
+        platform: "XP"
+    },{
+        browserName: "chrome",
+        version: "28",
+        platform: "Mac 10.6"
 	}];
 
 	grunt.initConfig({
