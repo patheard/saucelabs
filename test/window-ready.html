@@ -19,6 +19,7 @@
 
 	<script src="../node_modules/mocha/mocha.js"></script>
 	<script src="../node_modules/expect.js/expect.js"></script>
+	<script src="../node_modules/sinon/pkg/sinon.js"></script>
 	<script>
 		var ready = false;
 		mocha.setup('bdd');
@@ -31,7 +32,7 @@
 
 		$(window)
 			.on('ready', function() { ready = true; })
-			.on('load', mocha.run);
+			.on('load', function() { mocha.run(); });
 	</script>
 </body>
 </html>
